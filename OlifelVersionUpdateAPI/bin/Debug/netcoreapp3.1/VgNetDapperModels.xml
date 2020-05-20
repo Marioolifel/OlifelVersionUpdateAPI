@@ -1,0 +1,982 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VgNetDapperModels</name>
+    </assembly>
+    <members>
+        <member name="M:VgNetDapperModels.AbstractModels.DocCab`14.RecalculateTotals">
+            <summary>
+            Recalcula somatorios do cabeçalho
+            </summary>
+        </member>
+        <member name="P:VgNetDapperModels.AbstractModels.DocLin`10.QtdMax">
+            <summary>
+            Campo auxiliar para definir quantidade máxima possivel na linha (usano no caso dos QtdReG)
+            </summary>
+        </member>
+        <member name="M:VgNetDapperModels.AbstractModels.DocLin`10.RecalculatePrice(System.Collections.Generic.List{`6})">
+            <summary>
+            Assign new prices to current doclin
+            </summary>
+            <param name="artPrecos">List or artPrecos previously filtered by NumPreco</param>
+        </member>
+        <member name="M:VgNetDapperModels.AbstractModels.DocLin`10.Recalculate(VgNetDapperModels.Interfaces.IVgTipoDoc,System.Collections.Generic.List{`6})">
+            <summary>
+            Recalcula valores de linha
+            </summary>
+            <param name="tipoDoc">TipoDoc relativo ao documento a ser processado</param>
+        </member>
+        <member name="M:VgNetDapperModels.AbstractModels.DocLin`10.getValDesconto(System.Nullable{System.Double},System.String)">
+            <summary>
+            Calcula valor total de desconto
+            </summary>
+            <param name="value">Valor ao qual vai ser aplicado o desconto</param>
+            <param name="percentagem">Percentagem de desconto</param>
+            <returns>Valor de desconto relativo ao parametro value</returns>
+        </member>
+        <member name="M:VgNetDapperModels.BaseModels.DocCab.#ctor(VgNetDapperModels.BaseModels.VgTipoDoc)">
+            <summary>
+            Inicializa DocCab com um Tipo de Documento
+            </summary>
+            <param name="tipoDoc"></param>
+        </member>
+        <member name="M:VgNetDapperModels.BaseModels.DocCab.#ctor(VgNetDapperModels.BaseModels.VgTerceiro)">
+            <summary>
+            Inicializa DocCab com um terceiro
+            </summary>
+            <param name="terceiro"></param>
+        </member>
+        <member name="M:VgNetDapperModels.BaseModels.DocCab.SetTerceiro(VgNetDapperModels.BaseModels.VgTerceiro)">
+            <summary>
+            Preenche o cabeçalho do documento com o terceiro especificado
+            </summary>
+            <param name="terceiro"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VgNetDapperModels.BaseModels.DocCab.SetMoradaDoc(VgNetDapperModels.BaseModels.VgMorada)">
+            <summary>
+            Atribui uma morada ao documento (MoradaDoc)
+            </summary>
+            <param name="morada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VgNetDapperModels.BaseModels.DocCab.SetMoradaDescarga(VgNetDapperModels.BaseModels.VgMorada)">
+            <summary>
+            Atribui uma morada de descarga ao documento
+            </summary>
+            <param name="morada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VgNetDapperModels.BaseModels.DocCab.SetMoradaCarga(VgNetDapperModels.BaseModels.VgMorada)">
+            <summary>
+            Atribui uma morada de carga ao documento
+            </summary>
+            <param name="morada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VgNetDapperModels.BaseModels.DocCab.AddDocLin(VgNetDapperModels.BaseModels.DocLin)">
+            <summary>
+            Adiciona uma linha nova ao documento
+            </summary>
+            <param name="linha"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VgNetDapperModels.BaseModels.DocCab.RecalculaDataVencimento(VgNetDapperModels.BaseModels.TBCondPag)">
+            <summary>
+            Recalcula data de vencimento do documento baseado nas condições de pagamento
+            </summary>
+            <param name="condPag"></param>
+            <returns></returns>
+        </member>
+        <member name="P:VgNetDapperModels.BaseModels.PlaneamentoDivisao.Ordem">
+            <summary>
+            Sequencia
+            </summary>
+        </member>
+        <member name="P:VgNetDapperModels.BaseModels.TPCapacidade.NFuncManha">
+            <summary>
+            Numero de funcionários do turno da manha
+            </summary>
+        </member>
+        <member name="P:VgNetDapperModels.BaseModels.TPCapacidade.NFuncTarde">
+            <summary>
+            Numero de funcionários do turno da tarde
+            </summary>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.consultarGuiasInput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultarGuiasInput.nifInterveniente">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultarGuiasInput.interveniente">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultarGuiasInput.codApaEstabelecimento">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultarGuiasInput.codInternoLocalRecolhaRetoma">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultarGuiasInput.codigoEstado">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultarGuiasInput.dataEstado">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultarGuiasInput.dataEstadoSpecified">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultarGuiasInput.pendentesAutorizacao">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultarGuiasInput.pendentesAutorizacaoSpecified">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultarGuiasInput.paginaPesquisar">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultarGuiasInput.numeroElementos">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultarGuiasInput.numeroElementosSpecified">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.commonInputSoap">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.commonInputSoap.tokenCertificacao">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.estabelecimentoGuia">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.estabelecimentoGuia.autorizaEmissao">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.estabelecimentoGuia.autorizaEmissaoSpecified">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.estabelecimentoGuia.codPostalSede">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.estabelecimentoGuia.codigoApa">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.estabelecimentoGuia.localidadeSede">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.estabelecimentoGuia.moradaSede">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.estabelecimentoGuia.nif">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.estabelecimentoGuia.nome">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.transportadorPesquisa">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transportadorPesquisa.nif">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transportadorPesquisa.nome">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.localRecolhaRetomaGuia">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.localRecolhaRetomaGuia.codigoAPA">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.localRecolhaRetomaGuia.codigoFluxo">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.localRecolhaRetomaGuia.codigoInterno">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.localRecolhaRetomaGuia.codigoPostal">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.localRecolhaRetomaGuia.codigoTipoPonto">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.localRecolhaRetomaGuia.descricao">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.localRecolhaRetomaGuia.estado">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.localRecolhaRetomaGuia.estadoSpecified">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.localRecolhaRetomaGuia.latitude">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.localRecolhaRetomaGuia.latitudeSpecified">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.localRecolhaRetomaGuia.localidade">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.localRecolhaRetomaGuia.longitude">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.localRecolhaRetomaGuia.longitudeSpecified">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.localRecolhaRetomaGuia.morada">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.localRecolhaRetomaGuia.nif">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.transporteMateriasPerigosas">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transporteMateriasPerigosas.categoria">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transporteMateriasPerigosas.classe">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transporteMateriasPerigosas.codigoEtiqueta">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transporteMateriasPerigosas.codigoRestricaoTuneis">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transporteMateriasPerigosas.grupoEmbalagem">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transporteMateriasPerigosas.numeroOnu">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transporteMateriasPerigosas.observacoesDois">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transporteMateriasPerigosas.observacoesUm">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transporteMateriasPerigosas.volumes">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.residuoCorrigido">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuoCorrigido.codigoGrupoCorrigido">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuoCorrigido.codigoOperacaoCorrigido">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuoCorrigido.codigoResiduoLerCorrigido">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuoCorrigido.descricaoGrupo">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuoCorrigido.descricaoOperacao">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuoCorrigido.descricaoResiduo">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuoCorrigido.numPglCorrigido">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuoCorrigido.quantidadeCorrigido">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuoCorrigido.quantidadeCorrigidoSpecified">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.residuo">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuo.designacao">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuo.codigoResiduoLer">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuo.codigoOperacao">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuo.quantidade">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuo.quantidadeSpecified">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuo.codigoGrupo">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuo.descricaoGrupo">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuo.descricaoResiduo">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuo.descricaoOperacao">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuo.numPgl">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuo.matricula">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.transportador">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transportador.dataHoraInicioTransporte">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transportador.dataHoraInicioTransporteSpecified">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transportador.dataValidade">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transportador.dataValidadeSpecified">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transportador.matricula">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transportador.nif">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transportador.nome">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.localRecolhaRetoma">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.localRecolhaRetoma.codigoInterno">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.localRecolhaRetoma.descricao">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.estabelecimento">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.estabelecimento.codigoAPA">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.estabelecimento.nomeEstabelecimento">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.remetente">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.remetente.codigoPostal">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.remetente.estabelecimento">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.remetente.localRecolhaRetoma">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.remetente.localidade">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.remetente.morada">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.remetente.nif">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.remetente.nome">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.remetente.tipoRemetente">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.destinatarioGuia">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.guia">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guia.numeroGuia">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guia.codigoGuia">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guia.url">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guia.remetente">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guia.destinatario">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guia.transportadores">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guia.residuoTransportado">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guia.residuoTransportadoCorrigido">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guia.transporteMateriasPerigosas">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guia.tipoProdutor">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guia.codigoEstado">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guia.descricaoEstado">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guia.dataEstado">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guia.dataEstadoSpecified">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guia.comentarioDestinatario">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guia.comentarioRemetente">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guia.comentarioEstado">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guia.pendenteAutorizacao">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guia.dataFimTransporte">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guia.dataFimTransporteSpecified">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guia.nifIntervinienteCriacao">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.resultado">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.resultado.codigo">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.resultado.descResultado">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.erro">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.erro.codigo">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.erro.descErro">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.commonOutputSoap">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.commonOutputSoap.erroList">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.commonOutputSoap.result">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.rejeitarGuiaOutput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.rejeitarGuiaOutput.guia">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.aceitarGuiaOutput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.aceitarGuiaOutput.guia">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.consultaEstabelecimentosOutput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultaEstabelecimentosOutput.estabelecimentos">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultaEstabelecimentosOutput.nif">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultaEstabelecimentosOutput.nome">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.anularGuiaOutput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.anularGuiaOutput.guia">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.associarGuiaOutput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.associarGuiaOutput.guia">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.consultaDadosTransportadorOutput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultaDadosTransportadorOutput.transportador">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.emitirGuiaOutput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.emitirGuiaOutput.guia">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.autorizarGuiaOutput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.autorizarGuiaOutput.guia">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.consultaLocaisRecolhaRetomaOutput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultaLocaisRecolhaRetomaOutput.locaisRecolhaRetoma">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultaLocaisRecolhaRetomaOutput.nif">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultaLocaisRecolhaRetomaOutput.nome">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.corrigirGuiaOutput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.corrigirGuiaOutput.guia">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.consultarGuiaDetalheOutput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultarGuiaDetalheOutput.guia">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.confirmarCorrecaoGuiaOutput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.confirmarCorrecaoGuiaOutput.guia">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.negarCorrecaoGuiaOutput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.negarCorrecaoGuiaOutput.guia">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.consultarGuiasOutput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultarGuiasOutput.guias">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultarGuiasOutput.numeroPagina">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultarGuiasOutput.numeroTotal">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultarGuiasOutput.numeroTotalPaginas">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.transporteMateriasPerigosasInput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transporteMateriasPerigosasInput.numeroOnu">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transporteMateriasPerigosasInput.grupoEmbalagem">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transporteMateriasPerigosasInput.observacoesUm">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transporteMateriasPerigosasInput.observacoesDois">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transporteMateriasPerigosasInput.volumes">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.residuoInput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuoInput.designacao">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuoInput.codigoResiduoLer">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuoInput.codigoOperacao">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuoInput.quantidade">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuoInput.codigoGrupo">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuoInput.numPgl">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.residuoInput.matricula">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.transportadorInput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transportadorInput.nif">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transportadorInput.matricula">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transportadorInput.dataHoraInicioTransporte">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.transportadorInput.numeroOrdem">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.destinatarioGuiaInput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.destinatarioGuiaInput.nif">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.destinatarioGuiaInput.codigoApa">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.remetenteInput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.remetenteInput.nif">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.remetenteInput.tipoRemetente">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.remetenteInput.codigoApaEstabelecimento">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.remetenteInput.morada">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.remetenteInput.codigoPostal">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.remetenteInput.localidade">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.remetenteInput.codigoLocal">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.guiaInput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guiaInput.remetente">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guiaInput.destinatario">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guiaInput.transportadores">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guiaInput.residuoTransportado">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guiaInput.transporteMateriasPerigosas">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.guiaInput.tipoProdutor">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.dadosCorrigidos">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.dadosCorrigidos.codigoResiduoLer">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.dadosCorrigidos.codigoOperacao">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.dadosCorrigidos.quantidade">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.dadosCorrigidos.codigoGrupo">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.dadosCorrigidos.numPgl">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.dadosCorrigidos.comentarioDestinatario">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.identificadorGuia">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.identificadorGuia.numeroGuia">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.identificadorGuia.codigoVerificacao">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.rejeitarGuiaInput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.rejeitarGuiaInput.nifInterveniente">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.rejeitarGuiaInput.idGuia">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.rejeitarGuiaInput.comentarioDestinatario">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.aceitarGuiaInput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.aceitarGuiaInput.nifInterveniente">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.aceitarGuiaInput.idGuia">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.aceitarGuiaInput.dataHoraFimTransporte">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.consultaEstabelecimentosInput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultaEstabelecimentosInput.nif">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultaEstabelecimentosInput.codigoAPA">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.anularGuiaInput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.anularGuiaInput.nifInterveniente">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.anularGuiaInput.idGuia">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.anularGuiaInput.observacoes">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.associarGuiaInput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.associarGuiaInput.nifInterveniente">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.associarGuiaInput.idGuia">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.associarGuiaInput.numeroGuiaAssociada">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.consultaDadosTransportadorInput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultaDadosTransportadorInput.nif">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.emitirGuiaInput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.emitirGuiaInput.nifInterveniente">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.emitirGuiaInput.guia">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.emitirGuiaInput.tipoInterveniente">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.autorizarGuiaInput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.autorizarGuiaInput.nifInterveniente">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.autorizarGuiaInput.idGuia">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.consultaLocaisRecolhaRetomaInput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultaLocaisRecolhaRetomaInput.nif">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultaLocaisRecolhaRetomaInput.codigoInterno">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultaLocaisRecolhaRetomaInput.codigoAPA">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.corrigirGuiaInput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.corrigirGuiaInput.nifInterveniente">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.corrigirGuiaInput.idGuia">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.corrigirGuiaInput.dadosCorrigidos">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.corrigirGuiaInput.dataHoraFimTransporte">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.consultarGuiaInput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.consultarGuiaInput.idGuia">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.confirmarCorrecaoGuiaInput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.confirmarCorrecaoGuiaInput.nifInterveniente">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.confirmarCorrecaoGuiaInput.idGuia">
+            <observações/>
+        </member>
+        <member name="T:VgNetDapperModels.eGarModels.negarCorrecaoGuiaInput">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.negarCorrecaoGuiaInput.nifInterveniente">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.negarCorrecaoGuiaInput.idGuia">
+            <observações/>
+        </member>
+        <member name="P:VgNetDapperModels.eGarModels.negarCorrecaoGuiaInput.comentarioRemetente">
+            <observações/>
+        </member>
+        <member name="M:VgNetDapperModels.Helpers.Licenciamento.GetPrazoString(System.String)">
+            <summary>
+            Obtém a string representativa do prazo através do seu caracter
+            </summary>
+            <param name="prazoChar"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VgNetDapperModels.Helpers.Licenciamento.GetExpirationDate(System.String,System.DateTime)">
+            <summary>
+            Obtém a data de expiraçcao
+            </summary>
+            <param name="prazoChar"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VgNetDapperModels.Helpers.Utils.LeftStr(System.String,System.Int32)">
+            <summary>
+            Retorna uma substring, a partir do 1º caracter à esquerda, com o tamanho indicado.
+            Se o tamanho da string  for inferior ao indicado retorna a mesma string
+            </summary>
+            <param name="str">A string a processar</param>
+            <param name="size">Tamanho desejado</param>
+            <returns>String igual ou inferior ao tamanho indicado</returns>
+        </member>
+        <member name="M:VgNetDapperModels.Helpers.Utils.ObterStringSemAcentosECaracteresEspeciais(System.String)">
+            <summary>
+            Retira Caracteres Especiais e Portugueses numa string
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VgNetDapperModels.Helpers.Utils.GetDocDatetime(System.DateTime,System.DateTime)">
+            <summary>
+            Converte para Datetime um valor de data e outro com a hora
+            </summary>
+            <param name="dtDoc">Data</param>
+            <param name="hrDoc">Hora</param>
+            <returns>Data hora</returns>
+        </member>
+        <member name="T:VgNetDapperModels.RSAEncryption.RSAEncriptionHelpers">
+            <summary>
+            Helper Class to use BouncyCastle.Crypto dll [RSA encryption]
+            </summary>
+        </member>
+        <member name="M:VgNetDapperModels.RSAEncryption.RSAEncriptionHelpers.Encrypt(System.String,System.Int32)">
+            <summary>
+            Encripts Data using RSA methology with VisualGest Private Key
+            </summary>
+            <param name="plainText">string data to Encrypt</param>
+            <returns></returns>
+        </member>
+        <member name="M:VgNetDapperModels.RSAEncryption.RSAEncriptionHelpers.Decrypt(System.String,System.Int32)">
+            <summary>
+            Decrypts data using RSA methology with VisualGest PUBLIC KEY
+            </summary>
+            <param name="cipherText">string data to Decrypt</param>
+            <returns></returns>
+        </member>
+        <member name="T:CryptographyAES.AESCypher">
+            <summary>
+            Classe de apoio para criptografia AES (Advanced Encryption Standard (AES)) 
+            </summary>
+        </member>
+        <member name="T:CryptographyAES.AESCypher.AESCryptographyLevel">
+            <summary>
+            Niveis de criptografia AES
+            Criptografia de 128, 192 e 256 Bits.
+            </summary>
+        </member>
+        <member name="F:CryptographyAES.AESCypher.AESCryptographyLevel.AES_128">
+            <summary>
+            Criptografia AES 128 Bits
+            </summary>
+        </member>
+        <member name="F:CryptographyAES.AESCypher.AESCryptographyLevel.AES_192">
+            <summary>
+            Criptografia AES 192 Bits
+            </summary>
+        </member>
+        <member name="F:CryptographyAES.AESCypher.AESCryptographyLevel.AES_256">
+            <summary>
+            Criptografia AES 256 Bits
+            </summary>
+        </member>
+        <member name="M:CryptographyAES.AESCypher.Encrypt(System.String,System.String,CryptographyAES.AESCypher.AESCryptographyLevel)">
+            <summary>
+            Criptografa string usando Rijndael (128,192,256 Bits).
+            </summary>
+            <param name="data">string a ser criptografada</param>
+            <param name="password">senha de criptografia</param>
+            <param name="bits">Nível de criptografia (128,192,256 bits)</param>
+            <returns>string criptografada</returns>
+        </member>
+        <member name="M:CryptographyAES.AESCypher.Decrypt(System.String,System.String,CryptographyAES.AESCypher.AESCryptographyLevel)">
+            <summary>
+            Descriptografa string usando Rijndael (128,192,256 Bits).
+            </summary>
+            <param name="data">string a ser descriptografada</param>
+            <param name="password">senha de descriptografia</param>
+            <param name="bits">Nível de descriptografia (128,192,256 bits)</param>
+            <returns>string descriptografada</returns>
+        </member>
+    </members>
+</doc>

@@ -75,6 +75,36 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:OlifelVersionUpdateAPI.Controllers.LicencasController.#ctor(Microsoft.Extensions.Options.IOptions{OlifelVersionUpdateAPI.Helpers.ConnectionsStrings},Microsoft.Extensions.Logging.ILogger{OlifelVersionUpdateAPI.Controllers.LicencasController})">
+            <summary>
+            Metodo Construtor de controller que recebe um connectionConfig para fazer a ligação à bd
+            </summary>
+            <param name="connectionConfig"></param>
+        </member>
+        <member name="M:OlifelVersionUpdateAPI.Controllers.LicencasController.TemLicencasNovas(System.String)">
+            <summary>
+            Verificar se tem licenças para importar
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OlifelVersionUpdateAPI.Controllers.LicencasController.ImportaLicenca(System.Int32)">
+            <summary>
+            Marca licenca como não sendo nova
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OlifelVersionUpdateAPI.Controllers.LicencasController.ObterLicencas(System.String)">
+            <summary>
+            Obtem licenças novas atraves do NIF da empresa
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OlifelVersionUpdateAPI.Controllers.LicencasController.ImportaLicenca(System.String)">
+            <summary>
+            Importa licenças
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:OlifelVersionUpdateAPI.Controllers.UtilizadoresController.GetUtilizadores">
             <summary>
             
